@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+body{
+  font-family: 'Roboto';
+
+}
 
 .App-logo {
   height: 40vmin;
