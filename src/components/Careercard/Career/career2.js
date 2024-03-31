@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom'
 import './indexs.css'; // Custom CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,7 +6,15 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FaClock } from 'react-icons/fa';
 
-const Career2 = () => {
+const Career2 = () => 
+{
+  const [jobname,setName]=useState("FullStack Developer")
+  const emailAddress = 'gvtejeshreddy111@gmail.com';
+  const subject = 'Job Application';
+  const body = 'Attached is my resume for the job application.';
+
+  const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(emailAddress)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
   return (<div className="con">
     <div className="cardmain">
         <div className='row1'>
@@ -30,7 +38,7 @@ const Career2 = () => {
           <h3>ROLE</h3>
           <p>As a Full-Stack Developer, your primary role will be to develop and maintain both the front-end and back-end of web applications. This includes collaborating with designers and product managers to translate requirements into technical specifications and writing clean, efficient code using languages like HTML, CSS, JavaScript, and frameworks such as React, Angular, or Vue.js. You will also be responsible for implementing responsive designs, optimizing databases, and ensuring data security and integrity. Additionally, conducting thorough testing and debugging, participating in code reviews, staying updated with the latest technologies, and collaborating with team members on projects will be key aspects of your responsibilities.</p>
         </div>
-        <center><Link to="/contact"><button>APPLY NOW</button></Link></center>
+        <center><Link to={`/apply/${jobname}`}><button>APPLY NOW</button></Link></center>
     </div>
 </div>);
 };

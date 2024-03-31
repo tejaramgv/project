@@ -27,11 +27,10 @@ Welcome to<span>Vaaj Labs</span>, your trusted partner for comprehensive busines
       </div> 
 
       <div className='service service3'>
-       <center><h1>Web Development Activities</h1></center>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXBk73CJORGZ6f672VwjUl0UDI9LCXwOg7Q&usqp=CAU"/>
-       <p>Web development encompasses various tasks such as planning, design, front-end and back-end development, database management, testing, deployment, and maintenance. Designing user-centric interfaces, implementing interactive features, and ensuring cross-browser compatibility are crucial aspects of front-end development. Back-end development involves creating server-side logic, databases, and APIs for data management and user authentication.</p>
-       </div>
-
+       <center><h1>Product Development</h1></center>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVXH-j8sRXRm6g5vn-CdZaevP8vTTuj7QhiQ&usqp=CAU"/>
+      <p>In our company, product development is a collaborative and innovative process focused on creating cutting-edge solutions that meet the evolving needs of our clients and customers. We have a dedicated team of skilled professionals, including developers, designers, engineers, and project managers, who work together to conceptualize, design, build, and launch innovative products and services.</p>
+      </div> 
       
       <div className='service service3'>
        <center><h1>Software Testing services</h1></center>
@@ -39,11 +38,13 @@ Welcome to<span>Vaaj Labs</span>, your trusted partner for comprehensive busines
         <p>In our company, software testing services are an integral part of our development process, ensuring that our software products meet the highest standards of quality and reliability. We employ a dedicated team of experienced QA engineers and testers who use industry-leading tools and methodologies to conduct thorough testing across various platforms and devices. </p>
       </div> 
 
+     
       <div className='service service3'>
-       <center><h1>Product Development</h1></center>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVXH-j8sRXRm6g5vn-CdZaevP8vTTuj7QhiQ&usqp=CAU"/>
-      <p>In our company, product development is a collaborative and innovative process focused on creating cutting-edge solutions that meet the evolving needs of our clients and customers. We have a dedicated team of skilled professionals, including developers, designers, engineers, and project managers, who work together to conceptualize, design, build, and launch innovative products and services.</p>
-      </div> 
+       <center><h1>Web Development Activities</h1></center>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXBk73CJORGZ6f672VwjUl0UDI9LCXwOg7Q&usqp=CAU"/>
+       <p>Web development encompasses various tasks such as planning, design, front-end and back-end development, database management, testing, deployment, and maintenance. Designing user-centric interfaces, implementing interactive features, and ensuring cross-browser compatibility are crucial aspects of front-end development. Back-end development involves creating server-side logic, databases, and APIs for data management and user authentication.</p>
+       </div>
+
 
     </div>
     </>

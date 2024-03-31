@@ -2,7 +2,7 @@
     display:flex;
     justify-content:space-evenly;
     align-items:center;
-  background-color:rgb(78, 77, 77);
+    background-color: rgb(13, 33, 94);
    
     color:white;
  
@@ -36,7 +36,7 @@
     color:rgb(223, 221, 221);
 }
 .rights{
-    background-color:rgb(71, 69, 69);
+    background-color: rgb(7, 20, 59);
     color:white;
 }
 @keyframes slideimgAnimation {

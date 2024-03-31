@@ -3,6 +3,7 @@
 }
 body{
   font-family: 'Roboto';
+  overflow-x: hidden;
 
 }
 
@@ -10,6 +11,12 @@ body{
   height: 40vmin;
   pointer-events: none;
 }
+@media (max-width: 768px) {
+ body{ overflow-x: hidden;}
+ .body{ overflow-x: hidden;}
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

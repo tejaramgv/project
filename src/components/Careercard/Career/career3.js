@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom'
 import './indexs.css'; // Custom CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +7,8 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FaClock } from 'react-icons/fa';
 
 const Career3 = () => {
+ const [jobname,setName]=useState("Python Developer")
+
   return (<div className="con">
     <div className="cardmain">
         <div className='row1'>
@@ -29,7 +31,7 @@ const Career3 = () => {
           <h3>ROLE</h3>
           <p>As a Python Developer, your primary role will be to design, develop, and maintain Python-based applications and software solutions. This includes writing clean and efficient code using Python programming language and collaborating with team members to translate business requirements into technical specifications. You will be responsible for conducting thorough testing and debugging to ensure software quality, optimizing application performance and scalability, and integrating data storage solutions such as SQL or NoSQL databases.</p>
         </div>
-        <center><Link to="/contact"><button>APPLY NOW</button></Link></center>
+        <center><Link to={`/apply/${jobname}`}><button>APPLY NOW</button></Link></center>
     </div>
 </div>);
 };

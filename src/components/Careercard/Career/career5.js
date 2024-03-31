@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom'
 import './indexs.css'; // Custom CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +7,8 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FaClock } from 'react-icons/fa';
 
 const Career5 = () => {
+ const [jobname,setName]=useState("C# Developer")
+
   return (<div className="con">
     <div className="cardmain">
         <div className='row1'>
@@ -29,7 +31,7 @@ const Career5 = () => {
           <h3>ROLE</h3>
        <p>As a C# Developer, your role will involve designing, developing, and maintaining software applications using the C# programming language and the .NET framework. You will collaborate with cross-functional teams to analyze requirements, implement features, conduct testing, and optimize application performance. Your responsibilities will also include integrating databases, staying updated with industry trends, participating in code reviews, and documenting technical specifications. The ideal candidate will have a strong background in C# programming, software development principles, and problem-solving skills, along with effective communication and teamwork abilities.  </p>
         </div>
-        <center><Link to="/contact"><button>APPLY NOW</button></Link></center>
+        <center><Link to={`/apply/${jobname}`}><button>APPLY NOW</button></Link></center>
     </div>
 </div>);
 };

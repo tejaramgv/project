@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom'
+
 import './indexs.css'; // Custom CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +8,8 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FaClock } from 'react-icons/fa';
 
 const Careercard = () => {
+ const [jobname,setName]=useState("Mern Stack Developer")
+
   return (<div className="con">
     <div className="cardmain">
         <div className='row1'>
@@ -30,7 +33,7 @@ const Careercard = () => {
           <h3>ROLE</h3>
           <p>A MERN stack developer is responsible for developing and maintaining web applications using the MongoDB, Express.js, React, and Node.js technologies. They collaborate with other team members to design and implement features, ensuring the application is responsive, efficient, and scalable. MERN stack developers also troubleshoot and debug issues, optimize performance, and stay updated with the latest trends and technologies in web development.</p>
         </div>
-        <center><Link to="/contact"><button>APPLY NOW</button></Link></center>
+        <center><Link to={`/apply/${jobname}`}><button>APPLY NOW</button></Link></center>
     </div>
 </div>);
 };

@@ -20,6 +20,8 @@ import Career3 from './components/Careercard/Career/career3';
 import Career4 from './components/Careercard/Career/career4';
 import Career5 from './components/Careercard/Career/career5';
 import Career6 from './components/Careercard/Career/career6';
+import Apply from './components/Apply';
+import './App.css'
 
 export const store=createContext()
 const App = () =>{
@@ -44,7 +46,7 @@ const App = () =>{
   
   
   return(
-  <>
+  <div className="body">
     <BrowserRouter>
       <ScrollToTopOnRouteChange />
       <Navbar />
@@ -71,6 +73,14 @@ const App = () =>{
             element={
               <RouteTransition>
                 <Products />
+              </RouteTransition>
+            }
+          />
+            <Route
+            path="/apply/:jobname"
+            element={
+              <RouteTransition>
+                <Apply />
               </RouteTransition>
             }
           />
@@ -168,7 +178,7 @@ const App = () =>{
       
       <Footer count={count} />
     </BrowserRouter>
-  </>
+  </div>
 );
           }
 

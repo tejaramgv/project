@@ -23,7 +23,6 @@ Vaaj Labs is a leading software development company dedicated to delivering inno
     Web and Mobile App Development    <br/>
     UI/UX Design    <br/>
     Cloud Solutions    <br/>
-    <br/>
     Digital Marketing Solutions</p>
     <h2>Our Approach</h2>
     <p>Our approach is centered around collaboration, creativity, and client satisfaction. We work closely with our clients to understand their goals, challenges, and vision, allowing us to develop customized solutions that exceed expectations. With a focus on innovation and quality, we strive to deliver projects on time and within budget.</p>

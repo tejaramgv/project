@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom'
 import './indexs.css'; // Custom CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +7,9 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FaClock } from 'react-icons/fa';
 
 const Career6 = () => {
+  const [jobname,setName]=useState("PHP Developer")
+
+
   return (<div className="con">
     <div className="cardmain">
         <div className='row1'>
@@ -30,7 +33,7 @@ const Career6 = () => {
           <h3>ROLE</h3>
           <p>As a PHP Developer, your primary responsibility will be to design, develop, and maintain web applications and solutions using PHP programming language. You will work closely with a team of developers and collaborate with stakeholders to analyze requirements, implement features, and ensure software quality. Your role will also involve integrating databases, optimizing application performance, staying updated with PHP frameworks and industry trends, and participating in code reviews. The ideal candidate will have strong PHP programming skills, experience with web development technologies, and the ability to work in a collaborative team environment.</p>
         </div>
-        <center><Link to="/contact"><button>APPLY NOW</button></Link></center>
+        <center><Link to={`/apply/${jobname}`}><button>APPLY NOW</button></Link></center>
     </div>
 </div>);
 };

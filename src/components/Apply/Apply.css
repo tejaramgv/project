@@ -1,16 +1,22 @@
 
 
 
-.boxing{
+.boxings{
     display:flex;
-    width:100vw;
-    justify-content:space-between;
+    justify-content:space-evenly;
     align-items:center;
     margin-top:64px;
    
 }
+.label{
+  font-size:13px;
+  margin-left:4%;
+}
+.forms h1{
+  color:rgb(8, 8, 117);
+}
 .captcha{
-  font-size:10px;
+
   margin-left:10px;
   /* align-items: flex-start; */
   margin-bottom:10px;
@@ -18,24 +24,17 @@
 .validemail{
 font-size:10px;
 }
-.boximg{
-width:50vw;
-align-self: flex-start;
-}
-.boximg img{
-  width:50vw;
-  height:100vh;
-}
+
 .boxing h1{
   color: #06175f;
 }
 
 .forms{
+  margin-left:10%;
     display:flex;
     border-top:solid 6px #06175f;
-    align-self: flex-start;
     margin-top:10px;
-    margin-right:100px;
+  
     margin-bottom:20px;
     flex-direction:column;
     background-color:rgb(255, 255, 255);
@@ -57,21 +56,8 @@ align-self: flex-start;
     border-color:none; */
     
 }
-.custom-toast-container{
-  writing-mode: horizontal-tb;
-}
 
-.forms textarea{
-    margin:10px;
-    padding:3px;
-    outline:none;
-    font-size:14px;
-    background:white;
-    border:solid 0.1px rgb(226, 224, 224);
-    color:rgb(8, 8, 8);
-    font-weight:bold;
 
-}
 .forms button{
     padding:9px;
     background-color: #06175f;
@@ -110,8 +96,8 @@ padding:9px;
   }
   
   .forms{
-    width:80vw;
-  margin-left:8%;
+  
+  margin-left:20%;
   }
 #button{
   font-size:10px;

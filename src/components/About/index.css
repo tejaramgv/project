@@ -27,7 +27,7 @@ body{
    
   }
   .aboutus{
-    color:orange;
+    color:rgb(9, 31, 102);
     margin-top: 70px;
     background-color:rgb(228, 224, 224);
     padding:10px;
@@ -43,11 +43,8 @@ body{
     color:rgb(145, 141, 141);
   }
   .content h1{
-    background-image: linear-gradient(to right, #da4621, #926746);
-    color: transparent;
-    
-    background-clip: text;
-
+ color:rgb(4, 62, 70);
+   
   }
 
   .about1, .about2 {

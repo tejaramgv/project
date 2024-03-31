@@ -25,7 +25,7 @@
   .link.active:before
   {
     transform: scaleX(1);
-    background-color: orange; /* Change this color as needed */
+    background-color: rgb(130, 183, 226); /* Change this color as needed */
   }
 }
   
@@ -44,12 +44,13 @@
     z-index: 1;
     width: 100%;
     top: 0;
-    background-color: rgb(133, 129, 129);
+    /* background-color: rgb(133, 129, 129); */
+    background-color: rgb(13, 33, 94);
     align-items: center;
   }
   
   .button {
-    background-color: rgb(44, 44, 43);
+    background-color: rgb(58, 119, 168); 
     padding: 5px;
     text-decoration: none;
     margin: 3px;
@@ -61,8 +62,8 @@
   }
   
   .button:hover {
-    padding: 4px;
-    background-color: rgb(20, 20, 19);
+    padding: 5px;
+    background-color: rgb(60, 113, 184);
   }
   .bars{
     display:none;
@@ -92,7 +93,7 @@
       
     .nav{
         display:flex;
-        background-color:rgb(75, 74, 74);
+        background-color: rgb(44, 57, 97);
       padding:10px;
       position:absolute;
       z-index:1;
@@ -145,7 +146,7 @@
   
   
   .link.active {
-    color: orange; /* Change text color to orange for active links */
+    color: rgb(80, 132, 245); /* Change text color to orange for active links */
   }
   
   .link.active:before {

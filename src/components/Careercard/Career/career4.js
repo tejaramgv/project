@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {Link} from 'react-router-dom'
 import './indexs.css'; // Custom CSS for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +7,8 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { FaClock } from 'react-icons/fa';
 
 const Career4 = () => {
+  const [jobname,setName]=useState("Business Development Executive")
+
   return (<div className="con">
     <div className="cardmain">
         <div className='row1'>
@@ -29,7 +31,7 @@ const Career4 = () => {
           <h3>ROLE</h3>
           <p>As a Business Development Executive, your primary responsibility will be to identify new business opportunities and drive sales growth for the company. You will be expected to research and analyze market trends, generate leads, and build strong relationships with potential clients. This role involves developing and implementing effective business development strategies, including sales presentations, negotiations, and follow-ups to secure new contracts and partnerships.</p>
         </div>
-        <center><Link to="/contact"><button>APPLY NOW</button></Link></center>
+        <center><Link to={`/apply/${jobname}`}><button>APPLY NOW</button></Link></center>
     </div>
 </div>);
 };

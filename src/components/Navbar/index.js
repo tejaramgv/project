@@ -46,7 +46,7 @@ const bars = () => {
 
   return (
     <div className="Navbar">
-     <div className="logo"> <img className="img" src="./logo-2.png" alt="" />
+     <div className="logo"> <Link to="/"><img className="img" src="./logo-2.png" alt="" /></Link>
     {bar? <FaTimes className="bars" onClick={bars} color="white" size={26}/>: <FaBars onClick={bars} className="bars" size={26} color="white" />}</div>
       <div className={`${bar?"nav":"display"}`}>
         <Link onClick={bars} className={`link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>

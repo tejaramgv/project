@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
+import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast';
 // import 'react-toastify/dist/ReactToastify.css';
@@ -13,10 +14,37 @@ const Feedback=()=>{
     const [feedback,setFeedback]=useState("")
     const [submit,setSubmit]=useState(false)
     const [submitted,setSubmitted]=useState(false)
+    const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+    const checked=()=>setIsCaptchaVerified(true)
     const nAme=(e)=>setName(e.target.value)
-    const eMail=(e)=>setEmail(e.target.value)
-    const pHone=(e)=>setPhone(e.target.value)
+    const eMail=(e)=>{setEmail(e.target.value)
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}(?:\.[^\s@]+)?$/;
+      setIsValidEmail(emailRegex.test(email));
+    }
+    const check=(e)=>{
+      if(e.key==="Enter"){setEmail(e.target.value)
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}(?:\.[^\s@]+)?$/;
+
+      setIsValidEmail(emailRegex.test(email));}
+    }
+
     const fEed=(e)=>setFeedback(e.target.value)
+
+    const [isValidEmail, setIsValidEmail] = useState(true);
+  
+   //validating phone
+   const [isValidPhoneNumber, setIsValidPhoneNumber] = useState(true);
+
+   const pHone = (e) => {
+     const input = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+     if (input.length <= 10) {
+       setPhone(input);
+       setIsValidPhoneNumber(true);
+     } else {
+       setIsValidPhoneNumber(false);
+     }
+   };
+  
     
 
     const handleSubmit=async()=>{
@@ -25,10 +53,15 @@ const Feedback=()=>{
           autoClose: 3000, // Close the notification after 3 seconds
           hideProgressBar: false, // Show the progress bar
           closeOnClick: true, // Close the notification when clicked
-          draggable: true, // Allow dragging the notification
+          draggable: true, // Allow dragging the notificaton
         });
         return;
+       
        }
+       if(!isValidEmail){
+        toast.error('Enter valid mail');
+        return;
+      }
        if(!email){
         toast.error('Enter valid mail');
         return;
@@ -39,6 +72,10 @@ const Feedback=()=>{
        }
        if(!feedback){
         toast.error('Enter Feedback');
+        return;
+       }
+       if(!isCaptchaVerified){
+        toast.error('Please Complete Captcha')
         return;
        }
        setSubmit(true)
@@ -89,10 +126,39 @@ const Feedback=()=>{
          <div className="forms">
             <center><h1>Feedback</h1></center>
     <input type="text" onChange={nAme} value={name} placeholder="Name"/>
-    <input type="mail" onChange={eMail} value={email} placeholder="Email"/>
-    <input type="text" onChange={pHone} value={phoneno} placeholder="Phone No"/>
+    <input
+        type="email"
+        id="email"
+        placeholder='Enter Your Mail'
+        value={email}
+        onKeyUp={check}
+        onChange={eMail}
+        style={{ borderColor: isValidEmail ? 'initial' : 'red' }} // Change border color based on validity
+      />
+      {!isValidEmail && <span className="validemail" style={{ color: 'red' }}>Please enter a valid email address.</span>}
+  
+
+      <input
+        type="text"
+        id="phone"
+        value={phoneno}
+        placeholder='Enter Phone Number'
+        onChange={pHone}
+        maxLength={10} // Limit input to 10 characters
+        style={{ borderColor: isValidPhoneNumber ? 'initial' : 'red' }} // Change border color based on validity
+      />
+      {!isValidPhoneNumber && (
+        <p style={{ color: 'red' }}>Please enter a valid phone number with up to 10 digits.</p>
+
+      )}
     <textarea id="textarea" onChange={fEed} value={feedback} placeholder="Your Message" name="textarea" rows="8" cols="50"></textarea>
-    <center>
+ 
+    <ReCAPTCHA className="captcha"
+          sitekey="6LdKDaopAAAAAIGW8tU1LRki2djXvZzM5e77JxLY"
+          onChange={checked}
+       
+        />
+           <center>
     {submit?<ClipLoader color="green"  size={17} />: <button id="button" onClick={handleSubmit}>
           SUBMIT
         </button>}

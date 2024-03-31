@@ -1,6 +1,6 @@
 .home{
     margin-top:60px;
-    height:70vh;
+
     display:flex;
     padding-bottom:10px;
 
@@ -71,7 +71,7 @@ font-size:15px;
 @media only screen and (max-width:768px) {
    .home{
     align-items:flex-start;
-    height:40vh;
+
    }
     .home img{
         width:100px;

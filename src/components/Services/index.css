@@ -28,7 +28,7 @@ align-items:center;
   }
   
   .service h1 {
-    color: #48ad61;
+    color: #073066;
     font-size:20px;
     margin-bottom: 10px;
 
@@ -38,11 +38,12 @@ align-items:center;
     text-align: justify;
   }
   .services{
-    margin-top:80px;
+    margin-top:65px;
     padding:0 100px 0 50px;
   }
   .services h1{
-    color:orange;
+    color:rgb(9, 30, 100);
+ 
     
 
   }
@@ -87,6 +88,10 @@ align-items:center;
     }
     .service h1{
       font-size:19px;
+    }
+    .services h1{
+      font-size:17px;
+
     }
     .service{
       width:80%;

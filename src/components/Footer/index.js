@@ -22,21 +22,22 @@ const Footer=({count})=>(
   <h1>Address</h1>
   <div className="icon"> <FaMapMarkerAlt color=" #48ad61"/><span>White Field Banglore</span></div>
   <div  className="icon"><AiOutlineMail color="#48ad61"/><span>techneeds@vaajlabs.com</span></div>
-  <div  className="icon"><AiOutlinePhone color="#48ad61"/><span>+91 8688-520-851
-</span>
-<span>+91 7416-237-222</span></div>
+ 
 <div className="icon"><FaBuilding color="#48ad61"/><span>www.vaajlabs.com</span></div>
 </div>
  
 
 <div className="items">
   <h1>Our Services</h1>
-  <div className="icon"><FaGlobe/><span>Web Development Activities</span></div>
-  <div className="icon"><FaCheckCircle/><span>software Testing Services</span></div>
+  <div className='icon'><FaCode/><span>App Fabrication</span></div>
+  <div className='icon'><FaShieldAlt/><span>Cyber Defense</span></div>
   <div className="icon"><RiProductHuntFill/><span>Product Development
 </span></div>
-<div className='icon'><FaCode/><span>App Fabrication</span></div>
-  <div className='icon'><FaShieldAlt/><span>Cyber Defense</span></div>
+<div className="icon"><FaCheckCircle/><span>software Testing Services</span></div>
+  <div className="icon"><FaGlobe/><span>Web Development Activities</span></div>
+
+
+ 
   <div className='icon'><FaBriefcase/><span>IT Consulting</span>
 </div>
 
