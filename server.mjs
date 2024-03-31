@@ -4,10 +4,10 @@ import router from './routes/authRoute.mjs'
 import cors from 'cors'
 const app=express();
 
-const corsOptions = {
-    origin: 'https://project-do5j.onrender.com',
-    optionsSuccessStatus: 200,
-  };
+// const corsOptions = {
+//     origin: 'https://project-1-rm5m.onrender.com',
+//     optionsSuccessStatus: 200,
+//   };
   
 app.use(cors())
 
